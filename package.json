@@ -2,6 +2,7 @@
   "name": "stock-images",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://silentflamecr.github.io/stock-images/",
   "dependencies": {
     "bootstrap": "^3.4.1",
     "gh-pages": "^1.1.0",

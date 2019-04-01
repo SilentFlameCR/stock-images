@@ -5,7 +5,7 @@
   "homepage": "https://silentflamecr.github.io/stock-images/",
   "dependencies": {
     "bootstrap": "^3.4.1",
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^1.2.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-scripts": "2.1.8"

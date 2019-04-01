@@ -17,7 +17,7 @@ class App extends React.Component {
   }
   
   updateState = async(e) => {
-      fetch(`https:api.unsplash.com/search/photos/?page=1&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
+      fetch(`http:api.unsplash.com/search/photos/?page=1&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
 		.then(res => res.json())
 		.then(data => {
 			this.setState({ results: data["results"] } );
@@ -37,7 +37,7 @@ class App extends React.Component {
       this.setState({text: search.value})
       
       
-      fetch(`https:api.unsplash.com/search/photos/?page=1&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
+      fetch(`http:api.unsplash.com/search/photos/?page=1&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
 		.then(res => res.json())
 		.then(data => {
 			this.setState({ results: data["results"] }, this.updateState );
@@ -57,7 +57,7 @@ class App extends React.Component {
       this.setState({text: search.value})
       
       
-      fetch(`https:api.unsplash.com/search/photos/?page=${this.state.counter}&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
+      fetch(`http:api.unsplash.com/search/photos/?page=${this.state.counter}&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
 		.then(res => res.json())
 		.then(data => {
 			this.setState({ results: data["results"] });

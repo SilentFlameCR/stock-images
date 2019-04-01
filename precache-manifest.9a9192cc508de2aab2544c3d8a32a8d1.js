@@ -28,16 +28,16 @@ self.__precacheManifest = [
     "url": "/stock-images/static/js/main.2fb0c466.chunk.js"
   },
   {
+    "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
+    "url": "/stock-images/static/media/glyphicons-halflings-regular.e18bbf61.ttf"
+  },
+  {
     "revision": "448c34a56d699c29117adc64c43affeb",
     "url": "/stock-images/static/media/glyphicons-halflings-regular.448c34a5.woff2"
   },
   {
     "revision": "89889688147bd7575d6327160d64e760",
     "url": "/stock-images/static/media/glyphicons-halflings-regular.89889688.svg"
-  },
-  {
-    "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
-    "url": "/stock-images/static/media/glyphicons-halflings-regular.e18bbf61.ttf"
   },
   {
     "revision": "9ed41320079ef6d5fada",

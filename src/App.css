@@ -25,17 +25,17 @@ input, .number-button {
 
 .all-imgs {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;  
 }
 
 .img-column {
-    height: 280px;
+    background-color: whitesmoke;
+    border: 5px solid #fff;
 }
 
 .one-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+        width: 100%;
+        height: auto;
 }
 
 .center-block {
@@ -47,4 +47,18 @@ input, .number-button {
 .navigate-btns button {
     width: 100%;
     margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 720px) {
+
+    .one-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .img-column {
+        height: 280px;
+    }
+    
 }

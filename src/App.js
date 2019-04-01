@@ -17,10 +17,12 @@ class App extends React.Component {
   }
   
   updateState = async(e) => {
-      fetch(`http:api.unsplash.com/search/photos/?page=1&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
+      
+//      console.log(this.state.results);
+      fetch(`https://api.unsplash.com/search/photos/?page=1&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
 		.then(res => res.json())
 		.then(data => {
-			this.setState({ results: data["results"] } );
+			this.setState({ results: data["results"] });
             
 		})
 		.catch(err => {
@@ -28,19 +30,19 @@ class App extends React.Component {
 		});
       
         
-  }
+    }
   
   onSubmit = async(e) => {
       e.preventDefault();
-//      console.log(this.state.results);
+     console.log(this.state.results);
       let search = document.getElementById("search");
       this.setState({text: search.value})
       
       
-      fetch(`https:api.unsplash.com/search/photos/?page=1&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
+      fetch(`https://api.unsplash.com/search/photos/?page=1&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
 		.then(res => res.json())
 		.then(data => {
-			this.setState({ results: data["results"] }, this.updateState );
+			this.setState({ results: data["results"] }, this.updateState);
             
 		})
 		.catch(err => {
@@ -57,7 +59,7 @@ class App extends React.Component {
       this.setState({text: search.value})
       
       
-      fetch(`https:api.unsplash.com/search/photos/?page=${this.state.counter}&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
+      fetch(`https://api.unsplash.com/search/photos/?page=${this.state.counter}&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
 		.then(res => res.json())
 		.then(data => {
 			this.setState({ results: data["results"] });
@@ -79,7 +81,7 @@ class App extends React.Component {
       this.setState({text: search.value})
       
       
-      fetch(`https:api.unsplash.com/search/photos/?page=${this.state.counter}&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
+      fetch(`https://api.unsplash.com/search/photos/?page=${this.state.counter}&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
 		.then(res => res.json())
 		.then(data => {
 			this.setState({ results: data["results"] });
@@ -115,6 +117,7 @@ class App extends React.Component {
               <Navigate 
                   nextPage={this.nextPage}
                   prevPage={this.prevPage}
+                  counter={this.state.counter}
               />
 
               <p className="text-center">

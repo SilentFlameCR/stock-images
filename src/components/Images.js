@@ -11,7 +11,7 @@ class Images extends React.Component {
         if(results.length > 0) {
             imgs = results.map(
                 img => <Img
-                        url={img.urls.thumb}
+                        url={img.urls.regular}
                         user={img.user.links.html}
                         name={img.user.name}
                         link={img.links.html}

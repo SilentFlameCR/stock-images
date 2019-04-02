@@ -49,7 +49,7 @@ class App extends React.Component {
 			console.log('Error happened during fetching!', err);
 		});
       
-        
+//        console.log(this.state.counter);
     }
   
   prevPage = async(e) => {
@@ -59,6 +59,7 @@ class App extends React.Component {
       this.setState({text: search.value})
       
       
+     if(this.state.counter >= 2){      
       fetch(`https://api.unsplash.com/search/photos/?page=${this.state.counter}&per_page=12&query=${this.state.text}&client_id=${API_KEY}`)
 		.then(res => res.json())
 		.then(data => {
@@ -69,9 +70,11 @@ class App extends React.Component {
 			console.log('Error happened during fetching!', err);
 		});
       
-      if(this.state.counter >= 1){
+      
         this.setState({counter: this.state.counter - 1});
       }
+      
+//      console.log(this.state.counter);
   }
   
   nextPage = async(e) => {
@@ -93,6 +96,8 @@ class App extends React.Component {
       
       
       this.setState({counter: this.state.counter + 1});
+      
+//      console.log(this.state.counter);
       
   }
     
